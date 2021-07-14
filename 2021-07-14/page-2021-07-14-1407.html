@@ -28,6 +28,8 @@ $(function(){
             console.log( "status:" + textStatus );
             console.log( "data:" + JSON.stringify(data, null, "	") );
 
+            $("#content").text( JSON.stringify(data, null, "	") );
+
         })
         .fail(function(jqXHR, textStatus, errorThrown ){
             console.log( "status:" + textStatus );
@@ -44,5 +46,8 @@ $(function(){
 </script>
 
 <input id="btn" name="btn" type="button" value="実行">
+<div id="content" style="white-space:pre">
+</div>
+
 </body>
 </html>
